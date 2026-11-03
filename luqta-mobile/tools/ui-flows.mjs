@@ -128,14 +128,14 @@ const flows = {
     await byId(page, 'cart-remove-milk').click();
     await page.waitForFunction((k) => !(JSON.parse(localStorage.getItem(k) || '{}').cart || {}).milk, STORE, { timeout: 5000 });
     await byId(page, 'coupon-input').fill('LUQTA1');
-    await withinMobileWidth(page, 'coupon-apply').click();
+    await (await withinMobileWidth(page, 'coupon-apply')).click();
     await page.getByText('LUQTA1').first().waitFor({ timeout: 5000 });
     return { ctx, page, note: `quantity +1, milk removed, demo coupon applied; cart=${JSON.stringify((await stored(page)).cart)}` };
   },
   async 'assistant-budget-basket'() {
     const { ctx, page } = await open('/assistant');
     await byId(page, 'chat-input').fill('جهز لي سلة بـ 20 دينار');
-    await withinMobileWidth(page, 'chat-send').click();
+    await (await withinMobileWidth(page, 'chat-send')).click();
     await byId(page, 'basket-suggestions').waitFor({ timeout: 10000 });
     await byId(page, 'review-basket').click();
     await page.waitForFunction((k) => Object.keys(JSON.parse(localStorage.getItem(k) || '{}').cart || {}).length > 0, STORE, { timeout: 8000 });
