@@ -1,0 +1,41 @@
+# Issue #107: credential-free review replaces broken auto-triggered Claude OAuth.
+# Release block Issue #102: this workflow cannot publish, deploy, or mutate Jawafa_DB.
+# Reintroducing AI review requires a separately approved, secret-safe PR and independent QA.
+name: Safe code review CI (no Claude OAuth)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'dashboard/**'
+      - 'jawafa-command-bridge/**'
+      - '.github/workflows/claude.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: safe-review-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  deterministic-review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout source without persistent credentials
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Set up Node 24
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - name: Run bridge and dashboard tests (no secret, no deploy)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --test jawafa-command-bridge/test.cjs
+          node --test dashboard/tests/navigation.test.mjs
+          node --test dashboard/tests/jawafa-native-integration.test.cjs
+      - name: Explain acceptance boundary
+        run: |
+          echo 'Credential-free regression complete; this is not a Claude AI review.'
+          echo 'Production deploy remains blocked by Issue #102.'
