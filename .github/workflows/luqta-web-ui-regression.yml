@@ -1,0 +1,53 @@
+name: Luqta Web UI regression (non-production)
+on:
+  push:
+    branches:
+      - fix/luqta-mobile-web-ui-flows-20261103
+    paths:
+      - 'luqta-mobile/**'
+      - '.github/workflows/luqta-web-ui-regression.yml'
+  pull_request:
+    branches: [luqta-2.0-design-3d]
+    paths:
+      - 'luqta-mobile/**'
+      - '.github/workflows/luqta-web-ui-regression.yml'
+permissions:
+  contents: read
+jobs:
+  web-ui:
+    name: Typecheck, test and real browser clicks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: luqta-mobile
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: luqta-mobile/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - name: Export web build
+        run: npx expo export --platform web --output-dir dist
+      - name: Install Playwright Chromium (CI only)
+        run: |
+          mkdir -p /tmp/pw
+          (cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.56.1 >/dev/null && npx playwright install --with-deps chromium)
+          ln -sfn /tmp/pw/node_modules/playwright "$GITHUB_WORKSPACE/luqta-mobile/node_modules/playwright"
+      - name: Assert real UI interactions at mobile viewport
+        run: node tools/ui-flows.mjs dist ../evidence/flows
+      - name: Store test evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luqta-web-ui-regression
+          path: evidence/flows
+          if-no-files-found: ignore
+          retention-days: 14
