@@ -147,8 +147,8 @@ const makeStyles = (t: Palette) => StyleSheet.create({
   row: { flexDirection: "row-reverse", alignItems: "center", gap: 6, paddingVertical: 12, paddingHorizontal: 10 },
   image: { width: 70, height: 84 },
   trash: { width: 36, height: 44, alignItems: "center", justifyContent: "center" },
-  couponInput: { flex: 1, minHeight: 54, borderRadius: 14, borderWidth: 1, borderColor: t.line, backgroundColor: t.card, paddingHorizontal: 14, fontFamily: "IBMPlexSansArabic_500Medium", fontSize: 16, color: t.ink, textAlign: "right" },
-  apply: { width: "34%", minHeight: 54, borderRadius: 14, backgroundColor: t.orange, alignItems: "center", justifyContent: "center" },
+  couponInput: { flex: 1, flexShrink: 1, minWidth: 0, minHeight: 54, borderRadius: 14, borderWidth: 1, borderColor: t.line, backgroundColor: t.card, paddingHorizontal: 14, fontFamily: "IBMPlexSansArabic_500Medium", fontSize: 16, color: t.ink, textAlign: "right" },
+  apply: { width: 110, flexShrink: 0, minHeight: 54, borderRadius: 14, backgroundColor: t.orange, alignItems: "center", justifyContent: "center" },
   ctaRow: { flexDirection: "row-reverse", alignItems: "flex-end", gap: 2, marginTop: 12 },
   continue: { flexDirection: "row-reverse", alignItems: "center", justifyContent: "center", gap: 10, minHeight: 48 },
 });
