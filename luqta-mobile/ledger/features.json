@@ -1,0 +1,3137 @@
+{
+ "version": "2.0.0",
+ "groups": [
+  {
+   "id": "G01",
+   "name": "نظام التصميم والتنقل",
+   "features": [
+    {
+     "id": "F-G01-01",
+     "title": "ألوان وتوكنات مأخوذة من التصاميم (بنفسجي/مرجاني)",
+     "source": {
+      "file": "src/lib/theme.tsx",
+      "contains": [
+       "#FE585C",
+       "#F6F2FE",
+       "#1F0A47"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-02",
+     "title": "رأس العلامة: شعار لُقطة وAmer AI Store",
+     "source": {
+      "file": "src/components/design/kit.tsx",
+      "contains": [
+       "Amer AI Store",
+       "logoMark",
+       "brand-logo"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-03",
+     "title": "زر «شخصيتي» في الرأس يفتح التخصيص",
+     "source": {
+      "file": "src/components/design/kit.tsx",
+      "contains": [
+       "شخصيتي",
+       "/character"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-04",
+     "title": "شريط سفلي بأربعة تبويبات مع حالة نشطة",
+     "source": {
+      "file": "src/components/Shell.tsx",
+      "contains": [
+       "الرئيسية",
+       "اكتشف",
+       "السلة",
+       "حسابي",
+       "tabActive"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-05",
+     "title": "شارة عدد المنتجات على تبويب السلة",
+     "source": {
+      "file": "src/components/Shell.tsx",
+      "contains": [
+       "cartCount",
+       "badge"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-06",
+     "title": "خلفية متدرجة كما في التصاميم",
+     "source": {
+      "file": "src/components/Shell.tsx",
+      "contains": [
+       "LinearGradient",
+       "backgroundDeep"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-07",
+     "title": "زر الإجراء الرئيسي (CTA) بحالات التعطيل والانشغال",
+     "source": {
+      "file": "src/components/design/kit.tsx",
+      "contains": [
+       "export function CTA",
+       "busy",
+       "ActivityIndicator"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-08",
+     "title": "حالة تحميل موحدة",
+     "source": {
+      "file": "src/components/design/kit.tsx",
+      "contains": [
+       "export function LoadingBlock",
+       "accessibilityLiveRegion"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-09",
+     "title": "حالة خطأ موحدة مع إعادة المحاولة",
+     "source": {
+      "file": "src/components/design/kit.tsx",
+      "contains": [
+       "export function ErrorBlock",
+       "إعادة المحاولة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G01-10",
+     "title": "تنبيه انقطاع الخادم مع إعادة المحاولة",
+     "source": {
+      "file": "src/components/Shell.tsx",
+      "contains": [
+       "showOffline",
+       "refreshCatalog"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G02",
+   "name": "الشاشة الرئيسية",
+   "features": [
+    {
+     "id": "F-G02-01",
+     "title": "العنوان «شو بدك اليوم؟» والوصف",
+     "source": {
+      "file": "src/app/index.tsx",
+      "contains": [
+       "شو بدك اليوم؟",
+       "تسوق بالمحادثة"
+      ]
+     },
+     "design": "home",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G02-02",
+     "title": "بحث نصي يرسل السؤال للمساعد",
+     "source": {
+      "file": "src/app/index.tsx",
+      "contains": [
+       "home-search",
+       "/assistant"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G02-03",
+     "title": "زر البحث بصورة المنتج",
+     "source": {
+      "file": "src/app/index.tsx",
+      "contains": [
+       "home-camera",
+       "mode: \"photo\""
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G02-04",
+     "title": "زر الصوت يفتح البحث الصوتي (تسجيل وتحويل لنص) مع بديل إملاء لوحة المفاتيح",
+     "source": {
+      "file": "src/app/voice.tsx",
+      "contains": [
+       "ميكروفون لوحة المفاتيح",
+       "/ai/transcribe"
+      ]
+     },
+     "status": "verified-source",
+     "note": "الإدخال الصوتي يعتمد على إملاء لوحة المفاتيح؛ لا توجد وحدة تعرّف كلام مدمجة"
+    },
+    {
+     "id": "F-G02-05",
+     "title": "أربع بطاقات أقسام بأيقونات التصميم",
+     "source": {
+      "file": "src/app/index.tsx",
+      "contains": [
+       "catFood",
+       "catElectronics",
+       "catFashion",
+       "catHome"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G02-06",
+     "title": "منتجات مميزة مع «عرض الكل»",
+     "source": {
+      "file": "src/app/index.tsx",
+      "contains": [
+       "منتجات مميزة لك",
+       "عرض الكل"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G02-07",
+     "title": "«أضف إلى السلة» مع منع غير المتوفر",
+     "source": {
+      "file": "src/components/ProductCard.tsx",
+      "contains": [
+       "أضف إلى السلة",
+       "غير متوفر",
+       "disabled={out}"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G02-08",
+     "title": "فقاعة الشخصية وزر «ابدأ التسوق»",
+     "source": {
+      "file": "src/app/index.tsx",
+      "contains": [
+       "مستعد أساعدك",
+       "ابدأ التسوق",
+       "<Companion"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G03",
+   "name": "الاستكشاف والفروع",
+   "features": [
+    {
+     "id": "F-G03-01",
+     "title": "اختيار الفرع وحفظه على الجهاز",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "BranchPill",
+       "setBranch",
+       "اختر الفرع"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-02",
+     "title": "البحث عن منتجات أو علامات تجارية",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "explore-search",
+       "searchCatalog"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-03",
+     "title": "فلترة حسب السعر",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "budgets",
+       "setMaxPrice"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-04",
+     "title": "فلترة المتوفر في الفرع المختار",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "stockOnly",
+       "المتوفر فقط"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-05",
+     "title": "الترتيب بأربعة خيارات",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "sorts",
+       "السعر: من الأقل",
+       "الأعلى تقييمًا"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-06",
+     "title": "ستة أقسام بصور التصميم مع تمييز النشط",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "tileImages",
+       "tileActive",
+       "exSports"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-07",
+     "title": "قائمة القسم مع عرض الكل/أقل",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "showAll",
+       "عرض أقل"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-08",
+     "title": "بطاقة منتج مصغرة مع زر +",
+     "source": {
+      "file": "src/components/ProductCard.tsx",
+      "contains": [
+       "export function MiniProductCard",
+       "mini-add-"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-09",
+     "title": "المخزون حسب الفرع في القوائم",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "branchAware",
+       "branchStock"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-10",
+     "title": "حالة لا توجد نتائج",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "لا توجد منتجات مطابقة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G03-11",
+     "title": "الشخصية تدفع عربة التسوق بجانب العنوان",
+     "source": {
+      "file": "src/app/explore.tsx",
+      "contains": [
+       "action=\"cart\""
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G04",
+   "name": "صفحة المنتج والعرض ثلاثي الأبعاد",
+   "features": [
+    {
+     "id": "F-G04-01",
+     "title": "معرض صور مع مصغرات قابلة للاختيار",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "thumbActive",
+       "setImageIndex"
+      ]
+     },
+     "design": "product",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-02",
+     "title": "مصغّر الفيديو/360 يفتح العرض ثلاثي الأبعاد",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "فيديو وعرض 360°",
+       "/view3d/"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-03",
+     "title": "مشاركة المنتج",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "Share.share",
+       "مشاركة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-04",
+     "title": "المفضلة من صفحة المنتج",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "toggleFavorite",
+       "حفظ في المفضلة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-05",
+     "title": "شارة التوفر (تجريبي/متوفر/متبقي/غير متوفر)",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "توفر تجريبي",
+       "متبقي"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-06",
+     "title": "اختيار اللون",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "swatches",
+       "اللون"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-07",
+     "title": "الكمية بحدود المخزون والفرع",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "QtyStepper",
+       "remaining"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-08",
+     "title": "المواصفات (3 أعمدة وتفاصيل)",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "specIcons",
+       "المواصفات"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-09",
+     "title": "قارن",
+     "source": {
+      "file": "src/app/product/[id].tsx",
+      "contains": [
+       "toggleCompare",
+       "قارن"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-10",
+     "title": "عارض ثلاثي الأبعاد: تدوير/تقريب/تبعيد/إعادة",
+     "source": {
+      "file": "web-engines/viewer.js",
+      "contains": [
+       "zoomIn",
+       "zoomOut",
+       "reset",
+       "rotate"
+      ]
+     },
+     "evidence": "evidence/avatar/viewer-chair-3d.png",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G04-11",
+     "title": "«في غرفتي»: المقاس الحقيقي داخل غرفة بجانب شخص 175 سم",
+     "source": {
+      "file": "web-engines/viewer.js",
+      "contains": [
+       "trueScale",
+       "room.visible"
+      ]
+     },
+     "evidence": "evidence/avatar/viewer-chair-room.png",
+     "status": "verified-source",
+     "note": "ليس واقعًا معززًا بالكاميرا (AR)"
+    }
+   ]
+  },
+  {
+   "id": "G05",
+   "name": "السلة",
+   "features": [
+    {
+     "id": "F-G05-01",
+     "title": "صفوف بصورة واسم ووحدة وسعر",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "cart-row-",
+       "unit"
+      ]
+     },
+     "design": "cart",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-02",
+     "title": "تعديل الكمية بحدود المخزون",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "QtyStepper",
+       "max={max}"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-03",
+     "title": "حذف صنف من السلة",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "cart-remove-",
+       "Trash2"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-04",
+     "title": "إزالة أصناف لم تعد متاحة",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "missing",
+       "إزالة الأصناف غير المتاحة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-05",
+     "title": "رمز الخصم (من الخادم، أو رمز تجريبي واضح)",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "/coupons/validate",
+       "DEMO_COUPON"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-06",
+     "title": "ربط الخصم بمحتوى السلة",
+     "source": {
+      "file": "src/lib/checkout.ts",
+      "contains": [
+       "cartSignatureOf"
+      ]
+     },
+     "test": {
+      "file": "src/lib/checkout.test.mjs",
+      "name": "F-G05-06"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G05-07",
+     "title": "المجموع الفرعي مع «بيانات تجريبي» و«يُعاد التحقق عند التأكيد»",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "بيانات تجريبي",
+       "يُعاد التحقق عند التأكيد"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-08",
+     "title": "متابعة الشراء إلى العنوان والموعد",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "/delivery",
+       "متابعة الشراء"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G05-09",
+     "title": "مواصلة التسوق وحالة السلة الفارغة",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "مواصلة التسوق",
+       "سلتك فارغة"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G06",
+   "name": "التسوق بالمحادثة",
+   "features": [
+    {
+     "id": "F-G06-01",
+     "title": "فقاعات محادثة للمستخدم والمساعد",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "userBubble",
+       "botBubble"
+      ]
+     },
+     "design": "chat",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G06-02",
+     "title": "اقتراحات جاهزة للبدء",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "جهّز لي سلة بـ 20 دينار",
+       "prompt-"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G06-03",
+     "title": "فهم طلب «سلة بميزانية» بالأرقام العربية واللاتينية",
+     "source": {
+      "file": "src/lib/basket.ts",
+      "contains": [
+       "parseBasketRequest"
+      ]
+     },
+     "test": {
+      "file": "src/lib/basket.test.mjs",
+      "name": "F-G06-03"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G06-04",
+     "title": "بناء سلة ضمن الميزانية تحترم المخزون",
+     "source": {
+      "file": "src/lib/basket.ts",
+      "contains": [
+       "buildBasket"
+      ]
+     },
+     "test": {
+      "file": "src/lib/basket.test.mjs",
+      "name": "F-G06-04"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G06-05",
+     "title": "بطاقة «مقترحات السلة» مع أزرار أضف",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "مقترحات السلة",
+       "suggest-add-"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G06-06",
+     "title": "المجموع التقديري و«راجع السلة المقترحة»",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "المجموع التقديري",
+       "review-basket"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G06-07",
+     "title": "مساعد الخادم الاختياري أو التوصيات المحلية",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "checkAssistant",
+       "recommendProducts"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G06-08",
+     "title": "إرسال صورة منتج: تعرّف بالذكاء الاصطناعي على الخادم ومطابقة منتجات المتجر",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "/ai/vision",
+       "pickImageDataUrl"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-12 البحث بالصورة"
+     }
+    },
+    {
+     "id": "F-G06-09",
+     "title": "إيقاف/تشغيل الصوت",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "إيقاف الصوت",
+       "sound"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G07",
+   "name": "العنوان والدفع ومراجعة الطلب",
+   "features": [
+    {
+     "id": "F-G07-01",
+     "title": "«استخدم موقعي» عبر GPS بإذن المستخدم",
+     "source": {
+      "file": "src/app/delivery.tsx",
+      "contains": [
+       "requestForegroundPermissionsAsync",
+       "use-location"
+      ]
+     },
+     "design": "address",
+     "status": "needs-device"
+    },
+    {
+     "id": "F-G07-02",
+     "title": "خريطة توضيحية و«حدد على الخريطة»",
+     "source": {
+      "file": "src/app/delivery.tsx",
+      "contains": [
+       "MapArt",
+       "pick-on-map"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G07-03",
+     "title": "تفاصيل العنوان: مدينة/حي/شارع/مبنى/مستلم/هاتف",
+     "source": {
+      "file": "src/app/delivery.tsx",
+      "contains": [
+       "المدينة",
+       "الحي",
+       "رقم المبنى",
+       "addr-phone"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G07-04",
+     "title": "حفظ العنوان على الخادم للمستخدم المسجّل",
+     "source": {
+      "file": "src/app/delivery.tsx",
+      "contains": [
+       "api.post<{ address: Address }>(\"/addresses\""
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G07-05",
+     "title": "فترات التوصيل: صباحًا/بعد الظهر/مساءً",
+     "source": {
+      "file": "src/lib/commerce-types.ts",
+      "contains": [
+       "deliverySlots",
+       "بعد الظهر"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G07-06",
+     "title": "ثلاث طرق دفع: بطاقة/عند الاستلام/رصيد المتجر",
+     "source": {
+      "file": "src/app/payment.tsx",
+      "contains": [
+       "بطاقة بنكية",
+       "الدفع عند الاستلام",
+       "رصيد المتجر"
+      ]
+     },
+     "design": "payment",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G07-07",
+     "title": "نموذج بطاقة تجريبي مع تحقق Luhn والتاريخ",
+     "source": {
+      "file": "src/lib/checkout.ts",
+      "contains": [
+       "luhnValid",
+       "expiryValid"
+      ]
+     },
+     "test": {
+      "file": "src/lib/checkout.test.mjs",
+      "name": "F-G07-07"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G07-08",
+     "title": "الدفع بالبطاقة عبر نموذج HyperPay المستضاف (Visa/Mastercard/مدى) مع تحقق الخادم؛ البطاقة لا تمر بالمتجر",
+     "source": {
+      "file": "server/payments.mjs",
+      "contains": [
+       "paymentWidgets.js",
+       "isPaidCode",
+       "markPaid"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/payments.test.mjs",
+      "name": "F-G07-08 دفع بالبطاقة"
+     }
+    },
+    {
+     "id": "F-G07-09",
+     "title": "ملخص المجموع والخصم والتوصيل",
+     "source": {
+      "file": "src/lib/checkout.ts",
+      "contains": [
+       "computeTotals"
+      ]
+     },
+     "test": {
+      "file": "src/lib/checkout.test.mjs",
+      "name": "F-G07-09"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G07-10",
+     "title": "مراجعة الطلب: العنوان والوقت والدفع مع تعديل",
+     "source": {
+      "file": "src/app/checkout.tsx",
+      "contains": [
+       "عنوان التوصيل",
+       "وقت التوصيل",
+       "طريقة الدفع",
+       "تعديل"
+      ]
+     },
+     "design": "review",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G07-11",
+     "title": "لا تأكيد دون الشروط والعنوان والتحقق",
+     "source": {
+      "file": "src/lib/checkout.ts",
+      "contains": [
+       "canConfirmOrder"
+      ]
+     },
+     "test": {
+      "file": "src/lib/checkout.test.mjs",
+      "name": "F-G07-11"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G07-12",
+     "title": "تحقق الخادم من السعر والمخزون قبل التأكيد",
+     "source": {
+      "file": "src/app/checkout.tsx",
+      "contains": [
+       "checkCart",
+       "expectedSubtotal"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-04/05"
+     },
+     "status": "verified-auto"
+    }
+   ]
+  },
+  {
+   "id": "G08",
+   "name": "الطلبات والتتبع والمرتجعات",
+   "features": [
+    {
+     "id": "F-G08-01",
+     "title": "طلب تجريبي «محاكاة» محلي دون شحن أو تحصيل",
+     "source": {
+      "file": "src/lib/store.tsx",
+      "contains": [
+       "createDemoOrder",
+       "LQ-DEMO-",
+       "simulated"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-02",
+     "title": "بطاقة رقم الطلب وتاريخه",
+     "source": {
+      "file": "src/app/tracking/[id].tsx",
+      "contains": [
+       "رقم الطلب",
+       "تاريخ الطلب"
+      ]
+     },
+     "design": "tracking",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-03",
+     "title": "مراحل الطلب: استلام/تجهيز/بالطريق/تسليم",
+     "source": {
+      "file": "src/app/tracking/[id].tsx",
+      "contains": [
+       "استلام",
+       "تجهيز",
+       "بالطريق",
+       "تسليم"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-04",
+     "title": "خريطة المسار من المتجر إلى العنوان",
+     "source": {
+      "file": "src/components/design/MapArt.tsx",
+      "contains": [
+       "route",
+       "truck"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-05",
+     "title": "آخر تحديث للطلب",
+     "source": {
+      "file": "src/app/tracking/[id].tsx",
+      "contains": [
+       "آخر تحديث"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-06",
+     "title": "إلغاء الطلب حين يسمح الخادم",
+     "source": {
+      "file": "src/app/tracking/[id].tsx",
+      "contains": [
+       "/cancel",
+       "إلغاء الطلب"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-07",
+     "title": "طلباتي: الحالية/السابقة/المرتجعات",
+     "source": {
+      "file": "src/app/orders.tsx",
+      "contains": [
+       "الحالية",
+       "السابقة",
+       "المرتجعات"
+      ]
+     },
+     "design": "orders",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G08-08",
+     "title": "إعادة الشراء بالأسعار الحالية",
+     "source": {
+      "file": "src/lib/reorder.ts",
+      "contains": [
+       "reorderCart"
+      ]
+     },
+     "test": {
+      "file": "src/lib/reorder.test.mjs",
+      "name": "reorder"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G08-09",
+     "title": "طلب إرجاع بالمنتجات والسبب وصورة",
+     "source": {
+      "file": "src/app/orders.tsx",
+      "contains": [
+       "ReturnForm",
+       "pickImageDataUrl"
+      ]
+     },
+     "test": {
+      "file": "server/photos.test.mjs",
+      "name": "return and support photos"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G08-10",
+     "title": "الخريطة الحية لموقع السائق",
+     "source": {
+      "file": "src/app/live/[id].tsx",
+      "contains": [
+       "DeliveryMap",
+       "fetchDrivingRoute"
+      ]
+     },
+     "status": "needs-device"
+    }
+   ]
+  },
+  {
+   "id": "G09",
+   "name": "الدعم والإشعارات",
+   "features": [
+    {
+     "id": "F-G09-01",
+     "title": "تبويبا الدعم والإشعارات",
+     "source": {
+      "file": "src/app/support.tsx",
+      "contains": [
+       "الدعم",
+       "الإشعارات",
+       "Segmented"
+      ]
+     },
+     "design": "support",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G09-02",
+     "title": "محادثة الدعم عبر تذاكر الخادم",
+     "source": {
+      "file": "src/app/support.tsx",
+      "contains": [
+       "/tickets",
+       "المحادثة الحالية"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G09-03",
+     "title": "إرفاق صورة برسالة الدعم",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "ticket_photos",
+       "ticketPhoto"
+      ]
+     },
+     "test": {
+      "file": "server/photos.test.mjs",
+      "name": "return and support photos"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G09-04",
+     "title": "«طلب موظف»",
+     "source": {
+      "file": "src/app/support.tsx",
+      "contains": [
+       "ask-agent",
+       "موظف"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G09-05",
+     "title": "أحدث الإشعارات وتعليمها كمقروءة",
+     "source": {
+      "file": "src/app/support.tsx",
+      "contains": [
+       "/notifications/",
+       "read: true"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G09-06",
+     "title": "تعيين الكل كمقروء",
+     "source": {
+      "file": "src/app/support.tsx",
+      "contains": [
+       "read-all"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G09-07",
+     "title": "إعدادات الإشعارات",
+     "source": {
+      "file": "src/app/notification-settings.tsx",
+      "contains": [
+       "إعدادات الإشعارات",
+       "AsyncStorage"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G09-08",
+     "title": "إشعارات الهاتف: سجل أجهزة ومرسل Expo Push على الخادم (التسجيل من التطبيق يحتاج وحدة الإشعارات الأصلية)",
+     "source": {
+      "file": "server/push.mjs",
+      "contains": [
+       "exp.host/--/api/v2/push/send",
+       "DeviceNotRegistered"
+      ]
+     },
+     "status": "partial",
+     "test": {
+      "file": "server/push.test.mjs",
+      "name": "F-G09-08"
+     }
+    }
+   ]
+  },
+  {
+   "id": "G10",
+   "name": "الحساب والخصوصية",
+   "features": [
+    {
+     "id": "F-G10-01",
+     "title": "بطاقة الملف و«تعديل الملف»",
+     "source": {
+      "file": "src/app/profile.tsx",
+      "contains": [
+       "عضو في Amer AI Store",
+       "تعديل الملف"
+      ]
+     },
+     "design": "account",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-02",
+     "title": "النقاط و«استبدال»",
+     "source": {
+      "file": "src/app/profile.tsx",
+      "contains": [
+       "/rewards",
+       "استبدال"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-03",
+     "title": "قائمة الحساب الستة كما في التصميم",
+     "source": {
+      "file": "src/app/profile.tsx",
+      "contains": [
+       "بياناتي وعناويني",
+       "شخصيتي وحركتها",
+       "اللغة والمظهر",
+       "الخصوصية والأجهزة",
+       "تصدير بياناتي"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-04",
+     "title": "تسجيل الخروج",
+     "source": {
+      "file": "src/app/profile.tsx",
+      "contains": [
+       "session.logout",
+       "تسجيل الخروج"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-05",
+     "title": "حذف الحساب",
+     "source": {
+      "file": "src/app/profile.tsx",
+      "contains": [
+       "/delete-account",
+       "حذف الحساب"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-06",
+     "title": "حذف الصور والبيانات مع الحساب",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "DELETE FROM return_photos",
+       "DELETE FROM ticket_photos"
+      ]
+     },
+     "test": {
+      "file": "server/photos.test.mjs",
+      "name": "removed with the account"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G10-07",
+     "title": "الخصوصية والأجهزة",
+     "source": {
+      "file": "src/app/privacy.tsx",
+      "contains": [
+       "حذف الصورة",
+       "مسح البيانات المحلية"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-08",
+     "title": "تصدير بياناتي",
+     "source": {
+      "file": "src/app/export.tsx",
+      "contains": [
+       "Share.share",
+       "تصدير ومشاركة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G10-09",
+     "title": "اتصال الخادم وأدوات المدير والسائق",
+     "source": {
+      "file": "src/app/profile.tsx",
+      "contains": [
+       "/connection",
+       "/admin",
+       "/driver"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G11",
+   "name": "إنشاء الشخصية من صورة المستخدم",
+   "features": [
+    {
+     "id": "F-G11-01",
+     "title": "خطوات: صورة/معاينة/تخصيص",
+     "source": {
+      "file": "src/app/character-create.tsx",
+      "contains": [
+       "صورة",
+       "معاينة",
+       "تخصيص"
+      ]
+     },
+     "design": "create",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G11-02",
+     "title": "التقاط صورة بالكاميرا الأمامية",
+     "source": {
+      "file": "src/components/character/captureHtml.ts",
+      "contains": [
+       "capture=\"user\"",
+       "toDataURL"
+      ]
+     },
+     "status": "needs-device"
+    },
+    {
+     "id": "F-G11-03",
+     "title": "رفع صورة من الجهاز",
+     "source": {
+      "file": "src/app/character-create.tsx",
+      "contains": [
+       "upload-photo",
+       "getDocumentAsync"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G11-04",
+     "title": "موافقة صريحة قبل استخدام الصورة",
+     "source": {
+      "file": "src/app/character-create.tsx",
+      "contains": [
+       "photo-consent",
+       "أوافق على استخدام صورتي"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G11-05",
+     "title": "معالجة الوجه على الجهاز فقط (قص 256 بكسل)",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "processFace",
+       "faceProcessed"
+      ]
+     },
+     "evidence": "evidence/avatar/pose-photo-face.png",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G11-06",
+     "title": "أخذ لون البشرة والشعر من الصورة",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "skin = sample",
+       "hairC"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G11-07",
+     "title": "تعقيم الملف المحفوظ",
+     "source": {
+      "file": "src/lib/characterProfile.ts",
+      "contains": [
+       "sanitizeCharacter"
+      ]
+     },
+     "test": {
+      "file": "src/lib/characterProfile.test.mjs",
+      "name": "F-G11-07"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G11-08",
+     "title": "حذف الصورة والشخصية في أي وقت",
+     "source": {
+      "file": "src/lib/character.tsx",
+      "contains": [
+       "removePhoto",
+       "reset"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G11-09",
+     "title": "«تخطي الآن» ومثال الشخصية",
+     "source": {
+      "file": "src/app/character-create.tsx",
+      "contains": [
+       "create-skip",
+       "هكذا ستبدو"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G12",
+   "name": "الشخصية ثلاثية الأبعاد: الهيكل والحركة والأمان",
+   "features": [
+    {
+     "id": "F-G12-01",
+     "title": "هيكل عظمي احترافي: نموذج GLB مُسلَّح (SkinnedMesh + Skeleton) مع إعادة توجيه المفاصل",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "new T.GLTFLoader()",
+       "o.isBone",
+       "function targetLocal("
+      ]
+     },
+     "evidence": "evidence/avatar/avatar-evidence.json",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-02",
+     "title": "المشي بحركة مفاصل فعلية من مقطع هيكلي (AnimationMixer) مع بديل إجرائي",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "walk: { clip: 'walk'",
+       "new T.AnimationMixer(",
+       "thighL",
+       "kneeL",
+       "function gait(",
+       "GAIT_BONES"
+      ]
+     },
+     "evidence": "evidence/avatar/walk.mp4",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-03",
+     "title": "القفز (تحفّز/انطلاق/طيران/هبوط)",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "jump:",
+       "crouch("
+      ]
+     },
+     "evidence": "evidence/avatar/pose-jump.png",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-04",
+     "title": "التنقل: الدخول إلى الخانة مشيًا مع الالتفات",
+     "source": {
+      "file": "src/components/character/Companion.tsx",
+      "contains": [
+       "Animated.timing",
+       "facing"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-05",
+     "title": "النوم",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "sleep:",
+       "pillow"
+      ]
+     },
+     "evidence": "evidence/avatar/pose-sleep.png",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-06",
+     "title": "الاستيقاظ والتمطّي",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "wake:"
+      ]
+     },
+     "evidence": "evidence/avatar/pose-wake.png",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-07",
+     "title": "التسوق بعربة",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "cart:",
+       "buildCart"
+      ]
+     },
+     "evidence": "evidence/avatar/pose-cart.png",
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-08",
+     "title": "حركات إضافية وتقليل الحركة واحترام إعداد النظام",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "thumbs:",
+       "think:",
+       "reduceMotion"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-09",
+     "title": "حجم يقارب الربع افتراضيًا وقابل للتعديل 25–100%",
+     "source": {
+      "file": "src/lib/characterProfile.ts",
+      "contains": [
+       "scale: 0.25",
+       "clampScale"
+      ]
+     },
+     "test": {
+      "file": "src/lib/characterProfile.test.mjs",
+      "name": "F-G12-07"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G12-10",
+     "title": "لا تحجب الأزرار: خانة مستقلة وتمرير اللمس",
+     "source": {
+      "file": "src/components/character/Companion.tsx",
+      "contains": [
+       "pointerEvents=\"none\"",
+       "importantForAccessibility"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G12-11",
+     "title": "لا شراء دون تأكيد: الشخصية للعرض فقط",
+     "source": {
+      "file": "src/components/character/Companion.tsx",
+      "contains": [
+       "display-only",
+       "no access to the cart"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G13",
+   "name": "مزامنة لوحة القيادة والتشغيل",
+   "features": [
+    {
+     "id": "F-G13-01",
+     "title": "استيراد المنتجات والصور والأسعار والكميات والفروع",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "dashboardSync",
+       "section === 'dashboard-sync'"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-01/02/03"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-02",
+     "title": "منع التكرار بالمعرّف أو SKU أو الباركود",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "duplicatesMerged",
+       "findExisting"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-01/02/03"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-03",
+     "title": "معاينة دون كتابة ورفض الصفوف غير الصالحة",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "dryRun",
+       "rejected.push"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-01/02/03"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-04",
+     "title": "فحص السلة حسب الفرع قبل التأكيد",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "checkCart",
+       "/api/orders/check"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-04/05"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-05",
+     "title": "حارس تغيّر السعر عند إنشاء الطلب",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "expectedSubtotal",
+       "price_changed"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-04/05"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-06",
+     "title": "إدارة الفروع",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "validateBranches",
+       "section === 'branches'"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "F-G13-06"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-07",
+     "title": "التراجع عن آخر مزامنة عبر سجل الاستيراد",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "'dashboard-sync'",
+       "inventory_imports"
+      ]
+     },
+     "test": {
+      "file": "server/dashboardSync.test.mjs",
+      "name": "reversible through the inventory undo log"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G13-08",
+     "title": "فصل البيانات التجريبية عن الإنتاج",
+     "source": {
+      "file": "src/data/products.ts",
+      "contains": [
+       "SAMPLE catalogue",
+       "demo: true"
+      ]
+     },
+     "status": "verified-source"
+    }
+   ]
+  },
+  {
+   "id": "G14",
+   "name": "ميزات تطبيق أسواق جوافة (Aura) المدمجة",
+   "features": [
+    {
+     "id": "F-G14-01",
+     "title": "سجل الأسعار 30 يومًا ومخطط واتجاه ونصيحة «أفضل وقت للشراء»",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "luqta_price_update",
+       "priceStats("
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-01"
+     }
+    },
+    {
+     "id": "F-G14-02",
+     "title": "لوحة نبض السوق (Market Pulse) من بيانات المتجر الفعلية",
+     "source": {
+      "file": "src/app/market-pulse.tsx",
+      "contains": [
+       "/market/pulse",
+       "Bars"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-02"
+     }
+    },
+    {
+     "id": "F-G14-03",
+     "title": "تنبيهات الأسعار: هدف سعر + إشعار تلقائي عبر Trigger مرة واحدة",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "luqta_price_alert",
+       "/api/watchlist"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-03"
+     }
+    },
+    {
+     "id": "F-G14-04",
+     "title": "رادار الأسعار: سعرنا ومخزون الفروع وأسعار المنافسين المستوردة",
+     "source": {
+      "file": "src/app/price-radar.tsx",
+      "contains": [
+       "/compare",
+       "lowest"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-04"
+     }
+    },
+    {
+     "id": "F-G14-05",
+     "title": "محسّن السلة: بدائل أوفر، أفضل فرع، فجوة التوصيل المجاني (3 أهداف)",
+     "source": {
+      "file": "src/app/basket-optimizer.tsx",
+      "contains": [
+       "/basket/optimize",
+       "single-branch"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-05/06"
+     }
+    },
+    {
+     "id": "F-G14-06",
+     "title": "حزم التوفير يحددها المالك وتُطبّق فعليًا عند الدفع والتحقق",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "features.bundleFor(lines)",
+       "bundleDiscount"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-05/06"
+     }
+    },
+    {
+     "id": "F-G14-07",
+     "title": "يُشترى معًا من الطلبات الفعلية (مع بديل حسب القسم)",
+     "source": {
+      "file": "src/components/smart/ProductExtras.tsx",
+      "contains": [
+       "/together",
+       "TogetherSection"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-07"
+     }
+    },
+    {
+     "id": "F-G14-08",
+     "title": "رؤى الإنفاق ونصائح التوفير من طلبات العميل",
+     "source": {
+      "file": "src/app/insights.tsx",
+      "contains": [
+       "/me/insights",
+       "نصائح التوفير"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-08/30"
+     }
+    },
+    {
+     "id": "F-G14-09",
+     "title": "المشاهدات الأخيرة والتوصيات دون اتصال (موجودة) + اختصارات ذكية",
+     "source": {
+      "file": "src/components/smart/HomeExtras.tsx",
+      "contains": [
+       "SmartStrip",
+       "كل الأدوات"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-10",
+     "title": "القوائم الذكية مع ميزانية وإضافة الكل للسلة",
+     "source": {
+      "file": "src/app/lists/[id].tsx",
+      "contains": [
+       "list-to-cart",
+       "ProgressBar"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-10/11"
+     }
+    },
+    {
+     "id": "F-G14-11",
+     "title": "وضع العائلة: قائمة مشتركة برمز دعوة وأفراد وصلاحية المالك",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "/api/lists/join",
+       "shareCode()"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-10/11"
+     }
+    },
+    {
+     "id": "F-G14-12",
+     "title": "العدسة الذكية: بحث بالصورة عبر مزود ذكاء اصطناعي على الخادم",
+     "source": {
+      "file": "src/app/lens.tsx",
+      "contains": [
+       "/ai/vision",
+       "task: \"products\""
+      ]
+     },
+     "status": "needs-device",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-12 البحث بالصورة"
+     }
+    },
+    {
+     "id": "F-G14-13",
+     "title": "ماسح الباركود والكوبونات (BarcodeDetector) مع إدخال يدوي",
+     "source": {
+      "file": "src/components/smart/lensHtml.ts",
+      "contains": [
+       "BarcodeDetector",
+       "getUserMedia"
+      ]
+     },
+     "status": "needs-device"
+    },
+    {
+     "id": "F-G14-14",
+     "title": "قارئ الفواتير: OCR بالذكاء الاصطناعي أو لصق النص + حفظ ومقارنة الأسعار",
+     "source": {
+      "file": "src/lib/receiptParser.ts",
+      "contains": [
+       "parseReceiptText",
+       "TOTAL"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "src/lib/smart.test.mjs",
+      "name": "F-G14-14"
+     }
+    },
+    {
+     "id": "F-G14-15",
+     "title": "ماسح السعرات: القيم الغذائية بالباركود وللسلة وتقدير من صورة",
+     "source": {
+      "file": "src/app/nutrition.tsx",
+      "contains": [
+       "cartNutrition",
+       "task: \"nutrition\""
+      ]
+     },
+     "status": "needs-device",
+     "test": {
+      "file": "src/lib/smart.test.mjs",
+      "name": "F-G14-27/30/41"
+     }
+    },
+    {
+     "id": "F-G14-16",
+     "title": "البحث الصوتي: تسجيل MediaRecorder وتحويل لنص على الخادم",
+     "source": {
+      "file": "src/app/voice.tsx",
+      "contains": [
+       "/ai/transcribe",
+       "cleanVoiceQuery"
+      ]
+     },
+     "status": "needs-device",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-12/15/16"
+     }
+    },
+    {
+     "id": "F-G14-17",
+     "title": "الاستوديو الإبداعي: المنتج في مشاهد حياتية، سحب/تكبير/تدوير وحفظ PNG",
+     "source": {
+      "file": "src/components/smart/studioHtml.ts",
+      "contains": [
+       "toDataURL",
+       "pointermove"
+      ]
+     },
+     "status": "needs-device"
+    },
+    {
+     "id": "F-G14-18",
+     "title": "فيديوهات التسوق القصيرة مع إعجاب ومشاهدة وزر شراء",
+     "source": {
+      "file": "src/app/reels.tsx",
+      "contains": [
+       "/media?kind=",
+       "VideoSurface"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-18/19"
+     }
+    },
+    {
+     "id": "F-G14-19",
+     "title": "القصص (24 ساعة) على الرئيسية",
+     "source": {
+      "file": "src/components/smart/HomeExtras.tsx",
+      "contains": [
+       "StoriesRow",
+       "kind=story"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-18/19"
+     }
+    },
+    {
+     "id": "F-G14-20",
+     "title": "الرائج الآن من المشاهدات والمشاركات والطلبات",
+     "source": {
+      "file": "src/app/trending.tsx",
+      "contains": [
+       "/trending",
+       "trend"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-20/22"
+     }
+    },
+    {
+     "id": "F-G14-21",
+     "title": "فيديو العرض (YouTube) على الرئيسية من لوحة الإدارة",
+     "source": {
+      "file": "src/components/smart/YouTubeEmbed.tsx",
+      "contains": [
+       "youtube-nocookie.com/embed"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-22",
+     "title": "مشاركة المنتج مع تتبع المشاركات",
+     "source": {
+      "file": "src/components/smart/ProductExtras.tsx",
+      "contains": [
+       "useProductEvents",
+       "kind: \"view\""
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-20/22"
+     }
+    },
+    {
+     "id": "F-G14-23",
+     "title": "المستويات (برونزي→بلاتيني) والتقدم والشارات السبع",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "LEVELS",
+       "streak-7"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-23/24/25"
+     }
+    },
+    {
+     "id": "F-G14-24",
+     "title": "التسجيل اليومي بسلسلة متتالية ونقاط متزايدة (مرة يوميًا بتوقيت عمّان)",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "/api/rewards/checkin",
+       "ammanDay"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-23/24/25"
+     }
+    },
+    {
+     "id": "F-G14-25",
+     "title": "العب واربح: لعبة ذاكرة + جائزة يومية بتحقق منطقية النتيجة",
+     "source": {
+      "file": "src/lib/memoryGame.ts",
+      "contains": [
+       "export function flip",
+       "settle"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "src/lib/smart.test.mjs",
+      "name": "F-G14-25"
+     }
+    },
+    {
+     "id": "F-G14-26",
+     "title": "محفظة الكوبونات العامة وتطبيقها في السلة",
+     "source": {
+      "file": "src/app/coupons.tsx",
+      "contains": [
+       "/coupons/public",
+       "pendingCouponCode"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-26"
+     }
+    },
+    {
+     "id": "F-G14-27",
+     "title": "عروض البرق بعدّ تنازلي حي (offerEndsAt)",
+     "source": {
+      "file": "src/components/smart/ProductExtras.tsx",
+      "contains": [
+       "useCountdown",
+       "ينتهي العرض خلال"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "src/lib/smart.test.mjs",
+      "name": "F-G14-27/30/41"
+     }
+    },
+    {
+     "id": "F-G14-28",
+     "title": "الجولة التعريفية التفاعلية مع الشخصية (أول تشغيل + إعادة)",
+     "source": {
+      "file": "src/components/smart/TourOverlay.tsx",
+      "contains": [
+       "luqta-tour-v1",
+       "tour-next"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-29",
+     "title": "شاشة الأذونات (موقع/كاميرا/ميكروفون/إشعارات) مع الطلب عند الحاجة",
+     "source": {
+      "file": "src/app/permissions.tsx",
+      "contains": [
+       "requestForegroundPermissionsAsync",
+       "openSettings"
+      ]
+     },
+     "status": "needs-device"
+    },
+    {
+     "id": "F-G14-30",
+     "title": "التسوق الأخضر: توصيل مجمّع + تقدير CO₂ + 10 نقاط + الطزاجة",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "onDelivered",
+       "CO2_PER_TRIP_KG"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-08/30"
+     }
+    },
+    {
+     "id": "F-G14-31",
+     "title": "ألوان التطبيق (6 سمات) مع بقاء تصميم لُقطة افتراضيًا",
+     "source": {
+      "file": "src/lib/theme.tsx",
+      "contains": [
+       "SKINS",
+       "luqta-skin-v1"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-32",
+     "title": "لغة إنجليزية كاملة للتطبيق (موجودة في Aura)",
+     "source": {
+      "file": "src/app/smart-tools.tsx",
+      "contains": [
+       "SMART_GROUPS"
+      ]
+     },
+     "status": "partial"
+    },
+    {
+     "id": "F-G14-33",
+     "title": "بوابة التاجر: طلب انضمام، منتجات بمراجعة الإدارة، مبيعات، حملات",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "/api/merchant/apply",
+       "merchant.product.create"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-33/35"
+     }
+    },
+    {
+     "id": "F-G14-34",
+     "title": "لوحة الإدارة «النمو والمحتوى»: تجار، حملات، وسائط، حزم، منافسون، كوبونات، GLB",
+     "source": {
+      "file": "src/components/admin/GrowthPanel.tsx",
+      "contains": [
+       "/admin/merchants",
+       "/admin/competitor-prices"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-35",
+     "title": "الحملات الترويجية (بانرات) بموافقة الإدارة ونص مقترح بالذكاء الاصطناعي",
+     "source": {
+      "file": "server/features.mjs",
+      "contains": [
+       "/api/campaigns/manage",
+       "/api/ai/campaign-copy"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/features.test.mjs",
+      "name": "F-G14-33/35"
+     }
+    },
+    {
+     "id": "F-G14-36",
+     "title": "تعبئة بطاقة اختبار في الوضع التجريبي فقط",
+     "source": {
+      "file": "src/app/payment.tsx",
+      "contains": [
+       "card-sandbox",
+       "4242424242424242"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-37",
+     "title": "القيم الغذائية وتاريخ الصلاحية ونهاية العرض كحقول منتج موثّقة",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "'offerEndsAt', 'expiresAt'",
+       "القيم الغذائية غير صالحة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G14-38",
+     "title": "تقدم التوصيل المجاني وحزمة منطبقة في السلة",
+     "source": {
+      "file": "src/app/cart.tsx",
+      "contains": [
+       "cart-free-shipping",
+       "freeShippingProgress"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "src/lib/smart.test.mjs",
+      "name": "F-G14-27/30/41"
+     }
+    },
+    {
+     "id": "F-G14-39",
+     "title": "محفظة رقمية مشفّرة (Crypto) — مستبعدة لأسباب تنظيمية",
+     "source": {
+      "file": "ledger/AURA_FEATURES.md",
+      "contains": [
+       "Crypto"
+      ]
+     },
+     "status": "blocked-external"
+    },
+    {
+     "id": "F-G14-40",
+     "title": "ربط بطاقات بنكية محفوظة — مستبعد (لا تخزين بطاقات؛ يتطلب بوابة PCI)",
+     "source": {
+      "file": "ledger/AURA_FEATURES.md",
+      "contains": [
+       "PCI"
+      ]
+     },
+     "status": "blocked-external"
+    }
+   ]
+  },
+  {
+   "id": "G15",
+   "name": "الدخول بالهاتف وGoogle",
+   "features": [
+    {
+     "id": "F-G15-01",
+     "title": "تطبيع أرقام الهاتف (أردني افتراضيًا وأرقام عربية ودولية)",
+     "source": {
+      "file": "server/authProviders.mjs",
+      "contains": [
+       "export function normalizePhone",
+       "+962"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-01"
+     }
+    },
+    {
+     "id": "F-G15-02",
+     "title": "الدخول برمز SMS لمرة واحدة: مخزّن مُجزّأ، 5 دقائق، 5 محاولات، 5 رموز/ساعة",
+     "source": {
+      "file": "server/authProviders.mjs",
+      "contains": [
+       "/api/auth/phone/verify",
+       "timingSafeEqual",
+       "OTP_PER_PHONE_HOUR"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-02"
+     }
+    },
+    {
+     "id": "F-G15-03",
+     "title": "مزوّد الرسائل من الخادم فقط (Bird/Twilio) ووضع تطوير معطّل في الإنتاج",
+     "source": {
+      "file": "server/authProviders.mjs",
+      "contains": [
+       "'bird'",
+       "production"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-03"
+     }
+    },
+    {
+     "id": "F-G15-04",
+     "title": "إرسال SMS عبر Bird دون إرجاع الرمز للعميل",
+     "source": {
+      "file": "server/authProviders.mjs",
+      "contains": [
+       "api.bird.com/workspaces",
+       "AccessKey"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-04"
+     }
+    },
+    {
+     "id": "F-G15-05",
+     "title": "ربط رقم الهاتف بحساب قائم وعرض الهويات المرتبطة",
+     "source": {
+      "file": "server/authProviders.mjs",
+      "contains": [
+       "linked: true",
+       "/api/auth/identities"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-05"
+     }
+    },
+    {
+     "id": "F-G15-06",
+     "title": "Google: OAuth بالخادم ← رمز تطبيق لمرة واحدة ← جلسة؛ ربط بالبريد الموثّق؛ رمز ID أصلي",
+     "source": {
+      "file": "server/authProviders.mjs",
+      "contains": [
+       "/api/auth/google/callback",
+       "/api/auth/exchange",
+       "tokeninfo"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-06"
+     }
+    },
+    {
+     "id": "F-G15-07",
+     "title": "حذف حساب الهاتف/Google برمز الاسترداد وإزالة الهويات",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "viaRecovery",
+       "DELETE FROM user_identities WHERE user_id=?"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/authProviders.test.mjs",
+      "name": "F-G15-07"
+     }
+    },
+    {
+     "id": "F-G15-08",
+     "title": "واجهة الدخول الجديدة: Google + هاتف/بريد + رمز التحقق وإعادة الإرسال + رمز الاسترداد",
+     "source": {
+      "file": "src/components/AuthExtras.tsx",
+      "contains": [
+       "google-signin",
+       "otp-verify",
+       "RecoveryNotice"
+      ]
+     },
+     "status": "needs-device"
+    },
+    {
+     "id": "F-G15-09",
+     "title": "مسار الرابط العميق luqta://auth لإكمال دخول Google",
+     "source": {
+      "file": "src/app/auth.tsx",
+      "contains": [
+       "/auth/exchange",
+       "adoptSession"
+      ]
+     },
+     "status": "needs-device"
+    }
+   ]
+  },
+  {
+   "id": "G16",
+   "name": "تكافؤ تطبيقات التوصيل (requirements + gap backlog، تنفيذ مستقل)",
+   "features": [
+    {
+     "id": "F-G16-01",
+     "title": "البحث: اقتراحات فورية وعمليات بحث شائعة مجهولة وبحث حديث على الجهاز",
+     "source": {
+      "file": "src/components/smart/SearchSuggestions.tsx",
+      "contains": [
+       "/search/suggest",
+       "rememberSearch"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-01"
+     }
+    },
+    {
+     "id": "F-G16-02",
+     "title": "اكتشاف المتاجر (المتجر الرسمي + التجار المعتمدون) وصفحة المتجر",
+     "source": {
+      "file": "src/app/vendors.tsx",
+      "contains": [
+       "/vendors",
+       "BadgeCheck"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-02"
+     }
+    },
+    {
+     "id": "F-G16-03",
+     "title": "مجموعات منتجات منسّقة من الإدارة على الرئيسية",
+     "source": {
+      "file": "src/components/smart/HomeExtras.tsx",
+      "contains": [
+       "CollectionRows",
+       "/collections"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-03"
+     }
+    },
+    {
+     "id": "F-G16-04",
+     "title": "الولاء: بطاقة أختام تُصدر قسيمة شخصية مقيّدة بصاحبها",
+     "source": {
+      "file": "server/commerceExtras.mjs",
+      "contains": [
+       "STAMP-",
+       "stamp_awards"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-04"
+     }
+    },
+    {
+     "id": "F-G16-05",
+     "title": "التجارة السريعة: أقرب فرع متوفر، مسافة، زمن ورسوم من الخادم",
+     "source": {
+      "file": "server/commerceExtras.mjs",
+      "contains": [
+       "haversineKm",
+       "express_unavailable"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-05"
+     }
+    },
+    {
+     "id": "F-G16-06",
+     "title": "الاستلام من الفرع بدون رسوم أو سائق",
+     "source": {
+      "file": "server/commerceExtras.mjs",
+      "contains": [
+       "mode === 'pickup'",
+       "canSkipToDelivered"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-06"
+     }
+    },
+    {
+     "id": "F-G16-07",
+     "title": "تعليمات التوصيل والتوصيل بدون تلامس وإكرامية السائق (تظهر للسائق)",
+     "source": {
+      "file": "src/components/smart/DeliveryOptions.tsx",
+      "contains": [
+       "delivery-instructions",
+       "contactless",
+       "إكرامية السائق"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-05"
+     }
+    },
+    {
+     "id": "F-G16-08",
+     "title": "تقييم الطلب بعد التسليم مع وسوم وتنبيه الإدارة بالمنخفض",
+     "source": {
+      "file": "src/components/smart/HomeExtras.tsx",
+      "contains": [
+       "FeedbackPrompt",
+       "/feedback"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-07"
+     }
+    },
+    {
+     "id": "F-G16-09",
+     "title": "حوكمة مفاتيح الميزات: إيقاف فوري مدقق ومفروض على الخادم والتطبيق",
+     "source": {
+      "file": "server/commerceExtras.mjs",
+      "contains": [
+       "FLAG_DEFAULTS",
+       "feature_disabled"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-08"
+     }
+    },
+    {
+     "id": "F-G16-10",
+     "title": "الوصولية والعربية: دور لكل عنصر قابل للضغط واسم لكل حقل وعناوين عربية",
+     "source": {
+      "file": "server/accessibility.test.mjs",
+      "contains": [
+       "accessibilityRole",
+       "accessibilityLabel"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/accessibility.test.mjs",
+      "name": "F-G16-10"
+     }
+    },
+    {
+     "id": "F-G16-11",
+     "title": "تحليلات مجمّعة مجهولة مع إلغاء الاشتراك وقمع تحويل للإدارة",
+     "source": {
+      "file": "server/commerceExtras.mjs",
+      "contains": [
+       "analytics_daily",
+       "funnel"
+      ]
+     },
+     "status": "verified-auto",
+     "test": {
+      "file": "server/commerceExtras.test.mjs",
+      "name": "F-G16-09"
+     }
+    },
+    {
+     "id": "F-G16-12",
+     "title": "شريط السلة الثابت (عدد + مجموع)",
+     "source": {
+      "file": "src/components/smart/MiniCartBar.tsx",
+      "contains": [
+       "mini-cart",
+       "عرض السلة"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G16-13",
+     "title": "اشترِ الآن وادفع لاحقًا — يحتاج مزود تقسيط مرخّص (معروض معطّلًا)",
+     "source": {
+      "file": "src/app/payment.tsx",
+      "contains": [
+       "pay-bnpl"
+      ]
+     },
+     "status": "blocked-external"
+    },
+    {
+     "id": "F-G16-14",
+     "title": "إشعارات الهاتف Push — تحتاج وحدة أصلية وFCM",
+     "source": {
+      "file": "ledger/ROLLBACK_AND_BLOCKERS.md",
+      "contains": [
+       "Firebase Cloud Messaging"
+      ]
+     },
+     "status": "blocked-external"
+    },
+    {
+     "id": "F-G16-15",
+     "title": "الحجز/تناول الطعام خارج المنزل (Dineout) — خارج نطاق متجر التجزئة؛ البديل: الاستلام من الفرع",
+     "source": {
+      "file": "ledger/ROLLBACK_AND_BLOCKERS.md",
+      "contains": [
+       "Dineout"
+      ]
+     },
+     "status": "blocked-external"
+    }
+   ]
+  },
+  {
+   "id": "G17",
+   "name": "التشغيل والجودة والإطلاق (تنفيذ الاقتراحات)",
+   "features": [
+    {
+     "id": "F-G17-01",
+     "title": "حزمة نشر الخادم: Dockerfile غير جذري + docker-compose مع Caddy/HTTPS + ‎.env.example لكل المتغيرات + DEPLOY.md",
+     "source": {
+      "file": "deploy/Dockerfile",
+      "contains": [
+       "USER luqta",
+       "HEALTHCHECK",
+       "COMMERCE_DB=/data/"
+      ]
+     },
+     "test": {
+      "file": "server/deploy.test.mjs",
+      "name": ".env.example lists every env var the server reads"
+     },
+     "status": "verified-auto",
+     "evidence": "CI job server-image: docker build + تشغيل + تسجيل + إعادة تشغيل مع بقاء البيانات"
+    },
+    {
+     "id": "F-G17-02",
+     "title": "اختبارات واجهة شاملة بالنقر الفعلي: إضافة للسلة، محسّن السلة، الفوز باللعبة، الجولة، إتمام طلب تجريبي، التبديل للإنجليزية",
+     "source": {
+      "file": "tools/ui-flows.mjs",
+      "contains": [
+       "'add-to-cart'",
+       "'memory-game-win'",
+       "'demo-checkout'",
+       "'switch-to-english'",
+       "process.exit(failed ? 1 : 0)"
+      ]
+     },
+     "status": "verified-source",
+     "evidence": "CI screens › UI flows (يفشل البناء إن فشل أي مسار)"
+    },
+    {
+     "id": "F-G17-03",
+     "title": "اختبار على محاكي أندرويد: تثبيت APK الإصدار، فتح الشاشات بروابط عميقة، فحص النص العربي، وعدم وجود انهيار",
+     "source": {
+      "file": "tools/device-smoke.sh",
+      "contains": [
+       "adb install",
+       "uiautomator dump",
+       "luqta:///product/headphones",
+       "AndroidRuntime: Process"
+      ]
+     },
+     "status": "verified-source",
+     "evidence": "CI job device (محاكي x86_64 API 30). الهاتف الحقيقي يبقى D-items"
+    },
+    {
+     "id": "F-G17-04",
+     "title": "اللغة الإنجليزية (جزئي): مزوّد لغة، قاموس، ترجمة تلقائية للنصوص في Txt، اختيار اللغة من المظهر — التنقل والشاشات الرئيسية فقط",
+     "source": {
+      "file": "src/lib/i18nCore.ts",
+      "contains": [
+       "export function translate",
+       "\"Home\"",
+       "\"Basket optimizer\""
+      ]
+     },
+     "test": {
+      "file": "src/lib/i18n.test.mjs",
+      "name": "navigation tabs, smart tools and main screen titles all have English"
+     },
+     "status": "partial",
+     "evidence": "بقية النصوص والاتجاه LTR غير مكتملة"
+    },
+    {
+     "id": "F-G17-05",
+     "title": "التعرف على المنتج من صورة في المحادثة عبر /ai/vision (مفتاح الخادم)",
+     "source": {
+      "file": "src/app/assistant.tsx",
+      "contains": [
+       "/ai/vision",
+       "pickImageDataUrl"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G17-06",
+     "title": "توقيع الإصدار بمفتاح خاص من أسرار GitHub (يتراجع لمفتاح التطوير إن غابت)",
+     "source": {
+      "file": "tools/apply-release-signing.mjs",
+      "contains": [
+       "luqtaRelease",
+       "LUQTA_KEYSTORE_BASE64"
+      ]
+     },
+     "test": {
+      "file": "server/releaseSigning.test.mjs",
+      "name": "توقيع الإصدار بمفتاح خاص"
+     },
+     "status": "verified-auto"
+    }
+   ]
+  },
+  {
+   "id": "G18",
+   "name": "التقرير الرئيسي v4 — حزم العمل القابلة للبناء",
+   "features": [
+    {
+     "id": "F-G18-01",
+     "title": "WP-04 استيراد المخزون بخطوتين: معاينة دون حفظ (تكرار معرّف/باركود، صفوف غير صالحة، تعارض وحدات، تغير أسعار كبير) ثم اعتماد بمفتاح دفعة لا يتكرر مع حماية من تغيّر البيانات وبصمات قبل/بعد",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "function preview(",
+       "stale_preview",
+       "import_batches",
+       "afterHash"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "WP-04 import preview reports duplicates/invalid rows"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-02",
+     "title": "#4 جواز السعر: سعر الكيلو/اللتر، مصدر السعر ووقت آخر تحديث، نطاق 90 يومًا — في الخادم وصفحة المنتج",
+     "source": {
+      "file": "src/components/smart/PricePassport.tsx",
+      "contains": [
+       "/passport",
+       "جواز السعر"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "price passport with unit price"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-03",
+     "title": "#5 مدقق صدق الخصومات: «السعر قبل الخصم» موثّق فقط إن بيع به فعلًا خلال 30 يومًا",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "export function offerTruth",
+       "/api/ops/offer-audit"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "G18 pure rules"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-04",
+     "title": "#13 إنقاذ المنتجات قرب الصلاحية: توصيات تخفيض بتأكيد صريح، ومنع بيع المنتهي في السلة والطلب",
+     "source": {
+      "file": "server/commerce.mjs",
+      "contains": [
+       "operations.isExpired(p)",
+       "'expired'"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "expired items blocked"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-05",
+     "title": "#14 ذكاء المخزون: منخفض المخزون وكمية إعادة الطلب واقتراح تحويل بين الفروع دون مخزون سالب",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "function stockInsights(",
+       "transfers.push"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "stock insights, offer lab with margin guard, anomaly leads"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-06",
+     "title": "WP-19 مختبر العروض: محاكاة هامش وكميات بنطاق عدم يقين وحد أدنى للهامش؛ التكلفة سرية للمدير",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "export function simulateOffer",
+       "below_min_margin",
+       "product_costs"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "stock insights, offer lab with margin guard, anomaly leads"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-07",
+     "title": "WP-20 كاشف الفروقات: مطابقة الطلبات والمدفوعات والكوبونات والمحافظ والمخزون والصلاحية — خيوط تحقق لا اتهامات",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "function anomalies(",
+       "paid_without_gateway_record",
+       "ليست اتهامًا"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "stock insights, offer lab with margin guard, anomaly leads"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-08",
+     "title": "#18 جواز أدلة الطلب: سلسلة بصمات SHA-256 لكل حدث + لقطة الأسعار والدفع، للعميل صاحب الطلب والمدير",
+     "source": {
+      "file": "src/components/smart/EvidenceCard.tsx",
+      "contains": [
+       "/evidence",
+       "سجل الأدلة"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "hash-chained order evidence"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-09",
+     "title": "WP-12 نسخ احتياطي (VACUUM INTO + بصمة) وتمرين استعادة يتحقق من السلامة والأعداد",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "VACUUM INTO",
+       "function restoreDrill(",
+       "integrity_check"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "backup + restore drill"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-10",
+     "title": "NX-20/WP-15 موافقات صريحة قابلة للسحب (ذاكرة المنزل، التخصيص، التسويق) في شاشة الخصوصية، مطفأة افتراضيًا",
+     "source": {
+      "file": "src/components/smart/ConsentsCard.tsx",
+      "contains": [
+       "/me/consents",
+       "household_memory"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "consent-gated household memory"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-11",
+     "title": "NX-02 سلة المنزل المتوقعة من دورات الشراء (بموافقة؛ مراجعة قبل الإضافة؛ لا شراء تلقائي)",
+     "source": {
+      "file": "src/components/smart/HouseholdCard.tsx",
+      "contains": [
+       "/me/predicted-basket",
+       "لا شراء تلقائي"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "consent-gated household memory"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-12",
+     "title": "NX-04 تقدير ميزانية الشهر بنطاق من سجل الأسعار (تقدير لا ضمان)",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "function forecast(",
+       "kind: 'forecast'"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "consent-gated household memory"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-13",
+     "title": "WP-13/NX-05 مترجم نية التسوق «قائمة إلى سلة»: لهجة، كميات ووحدات، ميزانية، مطابقة SKU حقيقي، غير الموجود لا يُخترع",
+     "source": {
+      "file": "src/app/list-to-cart.tsx",
+      "contains": [
+       "/intent/parse",
+       "compileIntent",
+       "intent-add"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "intent compiler, bounded negotiation and agent-commerce feed"
+     },
+     "status": "verified-auto",
+     "evidence": "CI ui-flows › list-to-cart + src/lib/intent.test.mjs"
+    },
+    {
+     "id": "F-G18-14",
+     "title": "WP-22 تفاوض مقيد: يعرض فقط عروض محرك القواعد (حزم، كوبونات منشورة) ويرفض أي خصم خارجها",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "function negotiate(",
+       "لا أستطيع إنشاء خصم"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "intent compiler, bounded negotiation and agent-commerce feed"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-15",
+     "title": "WP-24/NX-19 جاهزية التجارة عبر الوكلاء: موجز كتالوج schema.org + وصف OpenAPI (دون ادعاء اعتماد UCP/ACP)",
+     "source": {
+      "file": "server/operations.mjs",
+      "contains": [
+       "/api/agent-commerce/feed",
+       "/api/agent-commerce/openapi.json",
+       "not certified"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "intent compiler, bounded negotiation and agent-commerce feed"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-16",
+     "title": "NX-16/WP-25 الواجهة البسيطة: خط أكبر وشخصية ثنائية الأبعاد خفيفة",
+     "source": {
+      "file": "src/lib/theme.tsx",
+      "contains": [
+       "simple: boolean",
+       "luqta-simple-v1"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G18-17",
+     "title": "WP-16 مظهر هولوجرام اختياري للشخصية (شفافية وتوهج سماوي؛ بلا وميض مع تقليل الحركة)",
+     "source": {
+      "file": "web-engines/avatar.js",
+      "contains": [
+       "state.holo",
+       "#67E8F9"
+      ]
+     },
+     "status": "verified-source",
+     "evidence": "تصوير محلي holo-on/holo-off"
+    },
+    {
+     "id": "F-G18-18",
+     "title": "الهوية الفضائية: لون «فضائي» اختياري + «مجرة المتجر» (الأقسام كمدارات ثنائية الأبعاد خفيفة تتوقف مع تقليل الحركة) — المقدمة الفضائية والمجرة ثلاثية الأبعاد لم تُبنَ",
+     "source": {
+      "file": "src/app/galaxy.tsx",
+      "contains": [
+       "مجرة المتجر",
+       "isReduceMotionEnabled",
+       "planet-"
+      ]
+     },
+     "status": "partial"
+    },
+    {
+     "id": "F-G18-19",
+     "title": "لوحة الإدارة «العمليات والأدلة» تجمع كل ما سبق بأزرار صريحة",
+     "source": {
+      "file": "src/components/admin/OperationsPanel.tsx",
+      "contains": [
+       "/ops/import/preview",
+       "/ops/anomalies",
+       "/ops/backups"
+      ]
+     },
+     "status": "verified-source"
+    },
+    {
+     "id": "F-G18-20",
+     "title": "بنود تتطلب أطرافًا خارجية: ربط POS/ERP حقيقي (Trust)، خرائط Routes وETA حي، AR، التوأم الرقمي بالرؤية، UCP/ACP رسمي، جسر AAS-CC/AW بإيصالات",
+     "source": {
+      "file": "ledger/ROLLBACK_AND_BLOCKERS.md",
+      "contains": [
+       "التقرير الرئيسي v4"
+      ]
+     },
+     "status": "blocked-external"
+    },
+    {
+     "id": "F-G18-21",
+     "title": "WP-06 مناطق التوصيل: رسوم حسب المسافة من أقرب فرع، رفض واضح للعنوان خارج المنطقة، محرر في لوحة الإدارة",
+     "source": {
+      "file": "server/commerceExtras.mjs",
+      "contains": [
+       "function zoneFor(",
+       "outside_service_area",
+       "deliveryZones"
+      ]
+     },
+     "test": {
+      "file": "server/operations.test.mjs",
+      "name": "WP-06 delivery service zones"
+     },
+     "status": "verified-auto"
+    },
+    {
+     "id": "F-G18-22",
+     "title": "WP-02 تحقق بخطوتين للمديرين (TOTP متوافق مع تطبيقات المصادقة): السر مشفّر، لا إعادة استخدام للرمز، وكل عملية إدارة تتطلب جلسة متحققة أيًا كانت طريقة الدخول",
+     "source": {
+      "file": "server/mfa.mjs",
+      "contains": [
+       "export function totp",
+       "mfa_sessions",
+       "last_counter"
+      ]
+     },
+     "test": {
+      "file": "server/mfa.test.mjs",
+      "name": "WP-02 admin two-step"
+     },
+     "status": "verified-auto"
+    }
+   ]
+  }
+ ],
+ "total": 217
+}
